@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'COVID-19-iOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for COVID-19-iOS
+
+  target 'COVID-19-iOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'COVID-19-iOSUITests' do
+    # Pods for testing
+  end
+  
+  pod 'Alamofire', '~> 5.2'
+  pod "SwiftyXMLParser", :git => 'https://github.com/yahoojapan/SwiftyXMLParser.git'
+
+end
