@@ -11,29 +11,33 @@
         <!--지역-->
         <scene sceneID="61x-uK-OZE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WHz-yt-MWK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="HMg-20-qiB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Area" id="HMg-20-qiB" customClass="AreaViewController" customModule="COVID_19_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dih-27-SLR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jv0-DA-yo0">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="135" width="414" height="678"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="v9G-l3-1wr" kind="embed" id="Br5-XC-4Zw"/>
-                                </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XR2-ZQ-qe2">
-                                <rect key="frame" x="0.0" y="86" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OXT-q6-C1T">
+                                <rect key="frame" x="142" y="96" width="131" height="32"/>
+                                <segments>
+                                    <segment title="지도"/>
+                                    <segment title="표"/>
+                                </segments>
                                 <connections>
-                                    <segue destination="b5e-lF-Yjh" kind="embed" id="bbz-Cl-bcc"/>
+                                    <action selector="segmentValueChanged:" destination="HMg-20-qiB" eventType="valueChanged" id="0Uw-pf-092"/>
                                 </connections>
-                            </containerView>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OIt-KC-0cY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OIt-KC-0cY" firstAttribute="trailing" secondItem="OXT-q6-C1T" secondAttribute="trailing" constant="141" id="K2r-KG-O41"/>
+                            <constraint firstItem="OXT-q6-C1T" firstAttribute="top" secondItem="OIt-KC-0cY" secondAttribute="top" constant="52" id="afA-ZD-iT9"/>
+                            <constraint firstItem="OXT-q6-C1T" firstAttribute="leading" secondItem="OIt-KC-0cY" secondAttribute="leading" constant="142" id="kLq-CA-0vK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="지역" id="Nr6-8p-U0m">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="URA-aU-gj7">
@@ -47,26 +51,81 @@
                             </segmentedControl>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="containerView" destination="jv0-DA-yo0" id="hpl-RQ-Bh4"/>
+                        <outlet property="segmentCtrl" destination="OXT-q6-C1T" id="4CS-Bx-xRK"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WHz-yt-MWK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2940.579710144928" y="79.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="ys8-p8-Rn4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="utW-vs-TRE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="v9G-l3-1wr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapView" id="v9G-l3-1wr" customClass="MapViewController" customModule="COVID_19_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Pm-MF-Xn4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dGZ-Dz-vBF">
-                                <rect key="frame" x="20" y="44" width="374" height="681"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="dGZ-Dz-vBF">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwT-I8-EG1">
-                                <rect key="frame" x="96" y="213" width="46" height="75"/>
+                                <rect key="frame" x="229" y="261" width="54" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="지역">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-9v-mgV">
+                                <rect key="frame" x="273" y="376" width="54" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="지역">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPw-st-uJJ">
+                                <rect key="frame" x="92" y="624" width="54" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="지역">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjs-In-hic">
+                                <rect key="frame" x="109" y="531" width="54" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="지역">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gez-a0-UlF">
+                                <rect key="frame" x="229" y="488" width="54" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="지역">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN2-aJ-7eK">
+                                <rect key="frame" x="109" y="376" width="54" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="지역">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdv-Xc-8QE">
+                                <rect key="frame" x="167" y="296" width="54" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="지역">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxg-rC-c1G">
+                                <rect key="frame" x="46" y="183" width="54" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="지역">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PvH-4f-7yL"/>
@@ -79,14 +138,14 @@
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="utW-vs-TRE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4000.0000000000005" y="-171.09375"/>
+            <point key="canvasLocation" x="4000.0000000000005" y="-171.42857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="jEE-EN-22T">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uB6-Cc-7Hb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="gbD-yu-vxc" sceneMemberID="viewController">
+                <viewController id="gbD-yu-vxc" customClass="ResultViewController" customModule="COVID_19_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pj5-el-jaM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,37 +323,37 @@
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uB6-Cc-7Hb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4857" y="80"/>
         </scene>
-        <!--View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="8eT-Z4-CZY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wrN-Yf-Sem" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="b5e-lF-Yjh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TableView" id="b5e-lF-Yjh" customClass="TableViewController" customModule="COVID_19_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D7d-93-Qd1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fhn-Mt-S7P">
-                                <rect key="frame" x="20" y="44" width="374" height="681"/>
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="rBR-oB-aa2" detailTextLabel="9Wd-sW-spe" style="IBUITableViewCellStyleSubtitle" id="LOP-It-fss">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RegionCell" textLabel="rBR-oB-aa2" detailTextLabel="9Wd-sW-spe" style="IBUITableViewCellStyleSubtitle" id="LOP-It-fss">
                                         <rect key="frame" x="0.0" y="28" width="374" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LOP-It-fss" id="dIE-yt-3kV">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="지역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rBR-oB-aa2">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" restorationIdentifier="areaName" insetsLayoutMarginsFromSafeArea="NO" text="지역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rBR-oB-aa2">
                                                     <rect key="frame" x="20" y="10" width="29.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="확진자 수, 증감 수 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Wd-sW-spe">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" restorationIdentifier="numLabel" insetsLayoutMarginsFromSafeArea="NO" text="확진자 수, 증감 수 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Wd-sW-spe">
                                                     <rect key="frame" x="20" y="31.5" width="90" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -316,12 +375,17 @@
                             <constraint firstItem="fhn-Mt-S7P" firstAttribute="leading" secondItem="D7d-93-Qd1" secondAttribute="leadingMargin" id="wOB-1L-ztd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="fhn-Mt-S7P" id="fZH-Xr-1HL"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wrN-Yf-Sem" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3999" y="406"/>
+            <point key="canvasLocation" x="4035" y="534"/>
         </scene>
     </scenes>
     <resources>
+        <image name="map" width="364" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
