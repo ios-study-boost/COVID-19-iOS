@@ -19,6 +19,7 @@
 		61E9CA80253DA76F00FA04BA /* COVID_19_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E9CA7F253DA76F00FA04BA /* COVID_19_iOSUITests.swift */; };
 		C44EA649A1A71D0A8775D506 /* Pods_COVID_19_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B145B55267D20F3079A0846B /* Pods_COVID_19_iOS.framework */; };
 		DA1DBC682541CEF7007D03C3 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1DBC672541CEF7007D03C3 /* SearchResult.storyboard */; };
+		DAB2384F25580BD100C00A24 /* DomesticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2384E25580BD100C00A24 /* DomesticViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		B0DB0B0CC43FD197930EF530 /* Pods_COVID_19_iOS_COVID_19_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_COVID_19_iOS_COVID_19_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B145B55267D20F3079A0846B /* Pods_COVID_19_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_COVID_19_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1DBC672541CEF7007D03C3 /* SearchResult.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResult.storyboard; sourceTree = "<group>"; };
+		DAB2384E25580BD100C00A24 /* DomesticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomesticViewController.swift; sourceTree = "<group>"; };
 		F76E987A441E8186288E54AF /* Pods-COVID-19-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID-19-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-COVID-19-iOSTests/Pods-COVID-19-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 				61E9CA5F253DA76B00FA04BA /* SceneDelegate.swift */,
 				61E9CA61253DA76B00FA04BA /* ViewController.swift */,
 				61E9CA63253DA76B00FA04BA /* Main.storyboard */,
+				DAB2384E25580BD100C00A24 /* DomesticViewController.swift */,
 				DA1DBC672541CEF7007D03C3 /* SearchResult.storyboard */,
 				61E9CA66253DA76F00FA04BA /* Assets.xcassets */,
 				61E9CA68253DA76F00FA04BA /* LaunchScreen.storyboard */,
@@ -412,6 +415,7 @@
 			files = (
 				61E9CA62253DA76B00FA04BA /* ViewController.swift in Sources */,
 				61E9CA5E253DA76B00FA04BA /* AppDelegate.swift in Sources */,
+				DAB2384F25580BD100C00A24 /* DomesticViewController.swift in Sources */,
 				61E9CA60253DA76B00FA04BA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
