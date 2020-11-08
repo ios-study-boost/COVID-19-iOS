@@ -216,6 +216,9 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="search" id="BxZ-rA-h4j"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="vmk-Yz-zji"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="domesticTableView" destination="zA8-m3-Gm5" id="1jt-HT-YWA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
