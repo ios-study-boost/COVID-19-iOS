@@ -109,7 +109,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" textLabel="bMS-e4-H5S" style="IBUITableViewCellStyleDefault" id="1VX-mm-ByK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="TempCell" textLabel="bMS-e4-H5S" style="IBUITableViewCellStyleDefault" id="1VX-mm-ByK">
                                         <rect key="frame" x="0.0" y="471.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1VX-mm-ByK" id="aie-Xs-Jhl">
@@ -138,6 +138,9 @@
                     <navigationItem key="navigationItem" title="설정된 기간" id="wsJ-Yl-qpf">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="vmk-Yz-zji"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tempTableView" destination="zA8-m3-Gm5" id="atN-7U-HbM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

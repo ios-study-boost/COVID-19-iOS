@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		039F3E53D9885911019C93E3 /* Pods_COVID_19_iOS_COVID_19_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0DB0B0CC43FD197930EF530 /* Pods_COVID_19_iOS_COVID_19_iOSUITests.framework */; };
 		4EF479B5C676125F59032DFA /* Pods_COVID_19_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942D3F4A1B933DDF8516545A /* Pods_COVID_19_iOSTests.framework */; };
+		616C2D32255315DB00306300 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C2D31255315DB00306300 /* AreaViewController.swift */; };
+		616C2D3A25531DC000306300 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C2D3925531DC000306300 /* MapViewController.swift */; };
+		616C2D3F25531DC700306300 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C2D3E25531DC700306300 /* TableViewController.swift */; };
+		616C2D4425531EB600306300 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C2D4325531EB600306300 /* ResultViewController.swift */; };
+		61A733A12554E2D60067FAD9 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A733A02554E2D60067FAD9 /* Area.swift */; };
 		61E9CA5E253DA76B00FA04BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E9CA5D253DA76B00FA04BA /* AppDelegate.swift */; };
 		61E9CA60253DA76B00FA04BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E9CA5F253DA76B00FA04BA /* SceneDelegate.swift */; };
 		61E9CA62253DA76B00FA04BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E9CA61253DA76B00FA04BA /* ViewController.swift */; };
@@ -41,6 +46,11 @@
 /* Begin PBXFileReference section */
 		06F0C1D9A3F4EE31FC5EF408 /* Pods-COVID-19-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID-19-iOS.release.xcconfig"; path = "Target Support Files/Pods-COVID-19-iOS/Pods-COVID-19-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		59F2DE5BE1CF5C268CB01007 /* Pods-COVID-19-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID-19-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-COVID-19-iOSTests/Pods-COVID-19-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		616C2D31255315DB00306300 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
+		616C2D3925531DC000306300 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		616C2D3E25531DC700306300 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		616C2D4325531EB600306300 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		61A733A02554E2D60067FAD9 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		61E9CA5A253DA76B00FA04BA /* COVID-19-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-19-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E9CA5D253DA76B00FA04BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61E9CA5F253DA76B00FA04BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +133,11 @@
 				61E9CA61253DA76B00FA04BA /* ViewController.swift */,
 				61E9CA63253DA76B00FA04BA /* Main.storyboard */,
 				DA1DBC672541CEF7007D03C3 /* SearchResult.storyboard */,
+				616C2D4325531EB600306300 /* ResultViewController.swift */,
+				616C2D31255315DB00306300 /* AreaViewController.swift */,
+				616C2D3925531DC000306300 /* MapViewController.swift */,
+				616C2D3E25531DC700306300 /* TableViewController.swift */,
+				61A733A02554E2D60067FAD9 /* Area.swift */,
 				61E9CA66253DA76F00FA04BA /* Assets.xcassets */,
 				61E9CA68253DA76F00FA04BA /* LaunchScreen.storyboard */,
 				61E9CA6B253DA76F00FA04BA /* Info.plist */,
@@ -411,8 +426,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				61E9CA62253DA76B00FA04BA /* ViewController.swift in Sources */,
+				616C2D3F25531DC700306300 /* TableViewController.swift in Sources */,
+				616C2D4425531EB600306300 /* ResultViewController.swift in Sources */,
 				61E9CA5E253DA76B00FA04BA /* AppDelegate.swift in Sources */,
 				61E9CA60253DA76B00FA04BA /* SceneDelegate.swift in Sources */,
+				616C2D3A25531DC000306300 /* MapViewController.swift in Sources */,
+				61A733A12554E2D60067FAD9 /* Area.swift in Sources */,
+				616C2D32255315DB00306300 /* AreaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
